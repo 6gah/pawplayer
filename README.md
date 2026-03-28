@@ -1,20 +1,36 @@
-# pawplayer 🐾
+## Installation
 
-A terminal lyrics player for Spotify on Linux. Displays synced lyrics with a starfield idle animation.
-
-## Dependencies
-- `playerctl`
-- `python3`
-- Spotify
-
-## Usage
+1. Clone the repo:
 ```bash
-python3 lyrics-instant.py
+git clone https://github.com/yourusername/pawplayer.git
 ```
 
-## Alias
+2. Add an alias to your `~/.zshrc` or `~/.bashrc`:
 ```bash
-alias pawplayer2="kitty --title pawplayer python3 ~/lyrics-instant.py"
+alias pawplayer="kitty --title pawplayer python3 ~/pawplayer/lyrics-instant.py"
 ```
 
-Lyrics fetched from [lrclib.net](https://lrclib.net).
+3. Reload your shell:
+```bash
+source ~/.zshrc
+```
+
+4. Run it:
+```bash
+pawplayer
+```
+
+## Hyprland window rule (optional)
+To open it as a floating window, add to `hyprland.conf`:
+```ini
+windowrule {
+    name = pawplayer-float
+    match:title = ^(pawplayer)$
+    float = true
+}
+windowrule {
+    name = pawplayer-size
+    match:title = ^(pawplayer)$
+    size = 670 140
+}
+```
