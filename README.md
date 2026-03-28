@@ -1,8 +1,31 @@
+# pawplayer 🐾
+
+> *meowmeow*
+
+A cozy vibe coded terminal lyrics player for Spotify on Linux. Lyrics type themselves out in sync (kinda) with your music.
+
+---
+
+## Features
+
+- Synced lyrics that animate character by character
+- Past lyrics dim and stack above the current line
+- Starfield idle animation when nothing is playing
+- Lyrics cached locally so they only fetch once
+- Tiny floating window that sits anywhere on your desktop
+
+## Dependencies
+
+- `python3`
+- `playerctl`
+- `spotify`
+- A true color terminal (kitty, foot, alacritty)
+
 ## Installation
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/pawplayer.git
+git clone https://github.com/6gah/pawplayer
 ```
 
 2. Add an alias to your `~/.zshrc` or `~/.bashrc`:
@@ -31,6 +54,6 @@ windowrule {
 windowrule {
     name = pawplayer-size
     match:title = ^(pawplayer)$
-    size = 670 140
+    size = 640 200
 }
 ```
